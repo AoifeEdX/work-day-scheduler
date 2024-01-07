@@ -31,11 +31,11 @@ Background image & favicon from Canva. Icons from FontAwesome.
 The following sites were used for reference:
 
 * Guide on JavaScript elements from [Learn X in Y minutes](https://learnxinyminutes.com/docs/javascript/).
-* Guides on working with date and time from [Day.js](https://day.js.org/docs/en/display/format).
+* Guides on working with dates and time from [Day.js](https://day.js.org/docs/en/display/format).
 * Guide on showing JavaScript data in HTML from [JavaScript Tutorial](https://www.javascripttutorial.net/javascript-dom/javascript-textcontent/).
 * Guide on using JQUERY from [JQUERY User Interface](https://jqueryui.com/).
 * Guide on customising HTML from [Bootstrap](https://getbootstrap.com/).
-* Guide on adding fonts from [Google Fonts](https://fonts.googleapis.com/)
+* Guide on adding fonts from [Google Fonts](https://fonts.googleapis.com/).
 
 ## License
 

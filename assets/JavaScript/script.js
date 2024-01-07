@@ -31,12 +31,11 @@
       textArea.val(savedEvent);
     }
 
-    // Create save button
+    // Declare save and delete buttons outside the loop
     let saveBtn = $("<button>")
       .addClass("col-md-1 saveBtn")
       .html('<i class="fas fa-save"></i>');
 
-    // Create delete button
     let deleteBtn = $("<button>")
       .addClass("col-md-1 deleteBtn")
       .html('<i class="fas fa-trash-alt"></i>');
@@ -45,14 +44,14 @@
     saveBtn.click(function () {
       let eventText = textArea.val();
       localStorage.setItem(`event-${dayjs().format("YYYY-MM-DD")}-${hour}`, eventText);
-      alert("Event saved");
+      showModal("Event saved", "#saveModal");
     });
 
     // Delete button click event
     deleteBtn.click(function () {
       textArea.val(""); // Clear the text area
       localStorage.removeItem(`event-${dayjs().format("YYYY-MM-DD")}-${hour}`);
-      alert("Event deleted");
+      showModal("Event deleted", "#deleteModal");
     });
 
     // Append columns to time block
@@ -70,23 +69,29 @@
     .addClass("col-md-1 btn btn-success saveAllBtn ml-2")
     .text("Save All");
 
-  // Save All button click event
-  saveAllBtn.click(function () {
-    $(".saveBtn").click(); // Trigger click on all save buttons
-    alert("All events saved");
-  });
-
   // Create "Clear All" button
   let clearAllBtn = $("<button>")
     .addClass("col-md-1 btn btn-danger clearAllBtn ml-2")
     .text("Clear All");
 
+  // Save All button click event
+  saveAllBtn.click(function () {
+    $(".saveBtn").click(); // Trigger click on all save buttons
+    showModal("All events saved", "#saveModal");
+  });
+
   // Clear All button click event
   clearAllBtn.click(function () {
     $("textarea").val(""); // Clear all text areas
     localStorage.clear(); // Clear all events from local storage
-    alert("All events cleared");
+    showModal("All events cleared", "#saveModal");
   });
+
+  // Function to show modal
+  function showModal(message, modalId) {
+    $(`${modalId} .modal-body`).text(message); // Update modal body text
+    $(modalId).modal("show"); // Trigger the modal show method
+  }
 
   // Append Save All and Clear All buttons to the new row
   buttonsRow.append(saveAllBtn, clearAllBtn);
