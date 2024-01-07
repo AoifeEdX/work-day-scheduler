@@ -1,0 +1,95 @@
+body {
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	font-weight: normal;
+	letter-spacing: -0.03rem;
+	line-height: 1.3;
+	min-height: 100vh;
+	background: url('background.gif') center/cover no-repeat;
+}
+
+textarea {
+  background: transparent;
+  resize: none;
+	margin: 0 10px 0 10px;	
+	border-style: solid;	
+  border-width: 1px;
+	border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+header {
+  background-color: transparent;
+  padding: 60px;
+	text-align: center;
+}
+
+h1 {
+	font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
+	margin-bottom: 30px;
+}
+
+.time-block {
+  text-align: center;
+	margin: 10px;
+}
+
+.hour {
+  display: flex;
+  justify-content: center;
+  align-items: center;	
+	background-color: azure;
+	border-style: solid;	
+  border-width: 1px;
+	border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.past {
+  background-color: gainsboro;
+  color: rgb(0, 0, 0);
+}
+
+.present {
+  background-color: palegoldenrod;
+}
+
+.future {
+  background-color: MediumSeaGreen;
+}
+
+.saveBtn {
+  border-radius: 10px;
+	border: none;
+  background-color: MediumSeaGreen; 
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+	margin: 0 10px 0 0;
+}
+
+.saveBtn:hover {
+  background-color: #b0e57c;
+}
+
+.deleteBtn {
+	border-radius: 10px;
+  border: none;
+  background-color: PaleVioletRed; 
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;	
+}
+
+.deleteBtn:hover {
+  background-color: #ff8f8f; 
+}
+
+.saveAllBtn,
+.clearAllBtn {
+	margin: 10px;
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
