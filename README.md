@@ -19,7 +19,7 @@ A simple calendar application that allows a user to save events for each hour of
 * Persists events between refreshes of a page.
 
 ## Screenshot
-![screenshot](/assets/images/screenshot.png)
+![screenshot](./assets/images/screenshot.png)
 
 ## Credits
 
